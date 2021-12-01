@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연결(link) TAG</title>
+
+    <!-- 
+        a라는 곳에서 btn-top라는 아이디를 스타일을 줄 경우.
+    -->
+
+    <style>
+        a#btn-top{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            font-size: 32px;
+            text-align: center;
+
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            line-height:50px;
+
+            position:fixed;
+            right:100px;
+            bottom:100px;
+            z-index:100;
+        }
+    </style>
 </head>
 <body>
-    <h1>연결(link) TAG</h1>
+    <h1 id="doc-top">연결(link) TAG</h1>
 
     <!-- 
         a는 Anchor(닻)의 줄임말.
@@ -30,8 +54,54 @@
     <a href="tel:+821084842737">전화를 하시려면 클릭하세요.</a>
     <br>
 
-    <!-- 
-        
+    <a href="./images/image-html.jpg">html_Image</a>
+    <br>
+
+    <!--    
+        브라우저에서 지원하지 않는 파일은 다운로드하게 한다.
      -->
+
+    <a href="./Hello.hwp">한글파일</a>
+    <br>
+
+    <!-- 
+        문서 내부에서의 링크.
+
+        #은 아이디를 나타내는 기호로 쓰인다.
+        html, css, javaScript에서 같은 기호로 표기한다.
+
+        a태그를 넣되, 경로가 설정되지 않았을 시
+        임시로 # 만 써주면 된다.(맨위로)
+    -->
+
+
+    <a href="#box01">1번 박스로</a>
+    <a href="#box02">2번 박스로</a>
+    <a href="#box03">3번 박스로</a>
+    <a href="#box04">4번 박스로</a>
+    <a href="#box05">5번 박스로</a>
+    <br>
+    <a href="#">예제15파일로</a>
+
+    <!-- 
+        id는 고유한 엘리먼트 이름이다.
+
+        만들때 id 쉽게 만들려면 ex)div*5#box$$ 를 하게 되면
+        $$에 알아서 번호매겨서 만들어진다.
+    -->
+
+    <a href="#doc-top" id="btn-top">^</a>
+
+     <div id="box01" style="height:500px; background-color: red;">1번박스</div>
+     <div id="box02" style="height:500px; background-color: green;">2번박스</div>
+     <div id="box03" style="height:500px; background-color: blue;">3번박스</div>
+     <div id="box04" style="height:500px; background-color: black;">4번박스</div>
+     <div id="box05" style="height:500px; background-color: purple;">5번박스</div>
+
+
+
+
+
+
 </body>
 </html>
