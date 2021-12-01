@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List</title>
 </head>
+
 <body>
-    
+    <h1>목록(list)</h1>
+    <h2>순서가 있는 목록(&lt;ol&gt;, &lt;li&gt;)</h2>
+
+    <!--     
+        ol>li*2 를 쓰면 ol 엘리먼트를 만들고,
+        그 자식 li 두개를 만든다.
+
+        스타일은 순서의 의미부여를 바꿀순 없으며,
+        출력시 보이는 것만 다르게 보인다.
+
+        실제로 순서가 있다면 ol을 쓰고
+        없다면 ul을 쓴다.
+    -->
+
+    <ol style="list-style:circle;">
+        <li>
+            대한민국
+            <ol>
+                <li>
+                    서울특별시
+                    <ol>
+                        <li>중구</li>
+                        <li>성동구</li>
+                        <li>종로구</li>
+                        <li>강남구</li>
+                        <li>구로구</li>
+                    </ol>
+                </li>
+                <li>인천광역시</li>
+            </ol>
+        </li>
+        <li>
+            미국
+            <ol>
+                <li>워싱턴</li>
+                <li>필라델피아</li>
+                <li>뉴욕</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- 
+        순서가 없는 목록의 앞에 붙는 기호들은 불릿인데
+        불릿들도 단계에 따라서 다르게 출력이 된다.        
+    -->
+
+    <h2>순서가 없는 목록(&lt;ul&gt;,&lt;li&gt;)</h2>
+    <ul style="list-style: none;">
+        <li style="list-style: none;">대한민국
+            <ul style="list-style: none; padding-left: 0;">
+                <li >서울특별시
+                    <ul>
+                        <li>중구</li>
+                        <li>성동구</li>
+                        <li>종로구</li>
+                        <li>강남구</li>
+                        <li>구로구</li>
+                    </ul>
+                </li>
+                <li>인천광역시</li>
+            </ul>
+        </li>
+
+        <li>미국
+            <ul>
+                <li>워싱턴</li>
+                <li>필라델피아</li>
+                <li>뉴욕</li>
+            </ul>
+        </li>
+    </ul>
+
+
 </body>
 </html>
