@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타등등 문자 TAG</title>
+</head>
+<body>
+    <!-- 
+        이 스타일은 강조효과가 없다.
+     -->
+    <h1 style="text-align:center">기타등등 문자 TAG </h1>
+    <h2>형광펜</h2>
+    <p>
+        <mark>ipsum dolor</mark> sit <span style="background-color: yellow;">amet consectetur</span> adipisicing elit. Ut cupiditate rerum perspiciatis eos iste, mollitia tenetur corrupti autem, veniam aliquid aut fugit itaque omnis minima nobis. Nisi eos rem non.
+    </p>
+    <br>
+    <!-- 
+        스크립트 코드를 그냥 쓰면 실행이 되므로
+        앞 뒤에 code 엘리먼트를 써준다.
+        그리고 code는 실행 되지 않을 뿐더러 
+        쓴 그대로 보이게 하고 싶으면
+        pre를 써주면 좋다.
+     -->
+    <h2>스크립트 코드</h2>
+    <pre style="background-color: lightgray;">
+        <code>
+function(){
+1+2;
+}
+        </code>
+    </pre>
+    <br>
+
+    <!-- 
+        윗 첨자는 sup
+        아래 첨자는 sub
+
+        각각 스타일을 적용시킬 수 있다.
+     -->
+
+    <h2>윗첨자 아래첨자</h2>
+    <p>
+        <span style="font-size:1.3em;">x</span><sup>2</sup>+2<span style="font-size:1.3em;">x</span>+3
+        <br>
+        log<sub style="font-size:0.5em;">10</sub>2
+    </p>
+    <br>
+
+    <h2>취소선</h2>
+    <p>
+        <s>Lorem ipsum</s> dolor <span style="text-decoration:line-through; ">sit amet consectetur</span> adipisicing elit. Eligendi libero provident autem accusantium, facilis inventore sapiente ullam commodi officiis ab odio vitae dolorem temporibus eos in officia laboriosam, assumenda earum.
+    </p>
+
+    <!-- 
+        쓰지말아야 할 것.
+        xmp는 안에 있는 엘리먼트를 종료시켜버린다.
+
+        &lt; &gt;를 활용하는게 낫다.
+     -->
+     <xmp>
+         <p>
+             qwerty
+         </p>
+     </xmp>
+
+
+</body>
+</html>

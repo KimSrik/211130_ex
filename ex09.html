@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자강조</title>
+</head>
+<body>
+    <h1>
+        <strong>글자 강조</strong>
+    </h1>
+    <h2>굵게</h2>
+    <!-- 
+        b는 화면상에서만 굵게 
+        (스타일만 굵게)       
+
+        strong은 화면상에서도 굵게
+        화면판독기도 굵게한다.
+        강조 할 때 사용한다.
+
+        span는 스타일, 의미도 없다.
+        대신 markup을 할 수 있다.
+        (부분을 묶어서 스타일을 줄 수 있다.)
+
+        (요즘은 강조할 때 b보다는 strong를 쓴다.)
+        (강조 할 때 b를 쓰면 웹 접근성에 위배가 된다.)
+    -->
+    <p>
+        &lt;b&gt;<b>Lorem, ipsum</b>&lt/b&gt;
+        dolor 
+        &lt;strong&gt;<strong style="font-weight:400; font-size:2em; color:red;">sit amet</strong>&lt;/strong&gt; consectetur 
+        &lt;span&gt;<span style="font-weight:100; color:aqua;">adipisicing elit.</span>&lt;/span&gt; Fugiat quia voluptate eveniet quo maxime? Dolorem similique quod laudantium ipsa, earum ex reprehenderit! Dolores aliquam incidunt eum, voluptas dolorem illo exercitationem.       
+    </p>
+    <br>
+    <!-- 
+        i는 그냥 스타일만 기울임
+
+        em은 기울임 + 강조를 표시
+        스타일을 넣어서 아래처럼 기울기를 없애고
+        색상을 넣어서 표기 할 수 있다.
+        화면 판독기는 강조를 한다.
+     -->
+    <h2>기울임</h2>
+    <p>
+        &lt;i&gt;<i>Lorem ipsum</i>&lt;/i&gt; dolor &lt;em&gt;<em style="font-style:normal; color:green;">sit, amet consectetur</em>&lt;/em&gt; adipisicing elit. &lt;span&gt;<span style="font-style:italic;">Quas debitis porro,</span>&lt;/span&gt; corrupti non, laborum eum eos expedita numquam suscipit beatae fugiat ad dolores? Voluptatem perspiciatis incidunt, dolore animi expedita perferendis?
+    </p>
+
+</body>
+</html>
