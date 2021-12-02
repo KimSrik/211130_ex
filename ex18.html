@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오(video)</title>
+</head>
+<body>
+    <h1>비디오(video)</h1>
+    <!--
+         음소거를 붙여야 오토플레이가 된다. 
+         muted를 붙여야 autoplay 작동.
+
+         소스 미디어는 반응형으로 비디오에서는 작동하지 않는다.
+
+         소스는 동영상으로 여러개를 쓰는 경우
+         브라우저에서 작동하는 것중 맨 위에 있는 것 하나만 작동 한다.
+         효율이 좋은 포맷을 위에 코딩한다.
+         (같은 동영상이라면 용량이 적은 동영상을 위에 코딩한다.)
+    -->
+    <video src="./media/coffee1.mp4" controls></video>
+    <video controls>
+        <source src="./media/coffee1.mp4">
+        <source src="./media/coffee2.mp4">
+        <source src="./media/coffee3.mp4">
+        <!-- <source media="(min-width: 0px)" srcset="./media/coffee3.mp4"> -->
+    </video>
+    <audio src="./media/coffee1.mp3" controls></audio>
+    <audio controls>
+    <source src="./media/coffee1.mp3">
+    <source src="./media/coffee2.mp3">
+    <source src="./media/coffee3.mp3">
+</body>
+</html>
