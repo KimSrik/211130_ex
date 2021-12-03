@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2(양식2)</title>
+</head>
+
+    <!-- 
+        form 안에 다른 엘리먼트도 쓸 수 있다.
+        보내지지 않지만 보낼 수도 있다.
+
+        input id  <-> label for 이 1:1로 하려면 맞춰야 한다.
+        id가 너무 많아서 헷갈리는 경우도 발생하므로
+        label 안에 input 을 넣어서 매칭 시키지 않고도 사용 가능하다.
+
+        type의 checkbox는 복수 선택이 가능하다
+
+        checked는 이미 체크되어 있게 하는 Attribute(속성)이다.
+    -->
+
+<body>
+        <h1>체크박스와 라디오버튼</h1>
+        <form>
+            <h2>수강 분야(복수 선택 가능)</h2>           
+            <label><input type="checkbox" checked> 문법</label>
+            <br>
+            <label><input type="checkbox"> 작문</label>
+            <br>
+            <label><input type="checkbox" > 독해</label>
+            <br><br>
+
+            <!-- 
+                1개만 선택 가능하게 할 때는 type radio를 쓴다.
+                (해제 기능 X)
+                name를 같게 써야 브라우저가 하나만 되게 인식을 한다.
+
+            -->
+
+            <h2>수강 과목(1과목만 선택 가능)</h2>
+            <label><input type="radio" name="tmp"> 국어</label>
+            <label><input type="radio" name="tmp"> 영어</label>
+            <label><input type="radio" name="tmp"> 수학</label>
+
+            <br>
+        </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form(양식)</title>
+</head>
+<body>
+    <h1>양식(Form)</h1>
+    <h2>로그인</h2>
+
+    <!-- 
+        input은 반드시 타입이 존재하는데 
+        text는 전부다 문자로 취급된다.
+        input와 1:1로 매칭되는 label(레이블)이 필요하다.
+        (인풋의 id와 레이블의 for가 매칭이 되어야 한다.)
+
+        비밀번호 같은 경우에는 타입에 password 해주면
+        우리가 알고 있는 비밀번호처럼 동그라미로 바꿔서 나온다.
+
+        타입이 submit로 만들면 버튼이 생긴다.
+        value는 박스 안의 텍스트에 들어가는 값이다.
+        (submit가 되면 form의 속성들이 발동된다.)
+
+        타입이 Reset은 폼 안에 기입한 것을 전부 삭제해준다.
+
+        name는 어떤 데이터가 무슨 데이터인지 
+        서버쪽에서 혼동되지 않게 하기 위해서 적는다.
+        (서로 필요한 경우에 이름을 맞춰서 한다.)
+        (지금 초기 개발 연습 단계에서는 쓰지 않음.)
+    -->
+
+    <form>
+        <label for="user-id">ID : </label>
+        <input type="text" id="user-id">
+        <br>
+        <label for="user-pw">PW : </label>
+        <input type="password" id="user-pw">
+        <br>
+        <input type="checkbox" name="save-login" id="save-login">
+        <label for="save-login">로그인 상태 유지</label>
+        <br>
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
