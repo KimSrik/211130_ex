@@ -6,8 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>양식4 input 속성(form4)</title>
 </head>
+
+    <!-- 
+
+        name, value, id는 기본
+        (value는 이미 갖게 되는 값)
+        (id는 엘리먼트를 구별할 수 있는 값, 서버로 전송되지는 않는다.)
+        (id가 아니라 name이 서버로 전송된다.)
+
+        autofocus는 커서가 자동으로 가서 깜빡거리고 있다.
+        (더 위에 있는 autofocus가 우선순위가 높다.)
+        placeholder 가상의 문자열로 힌트문구이다.
+        disabled를 쓰면 해당 칸을 사용하지 못하게 할 수 있다.
+        required는 해당란을 채우지 않으면 경고문이 뜨고 
+        form에 있는 정보가 전송되지 않는다.
+        required size는 보이는 글자수? 같은 개념.
+        minlength // maxlength 최소, 최대글자수인데
+        더 적거나 초과하게 되면 경고문이 발생하고 정보가 전송되지 않는다.
+        step는 숫자 우측에 숫자 조절하는 버튼을 누를 때 변동되는 수.
+
+        
+    -->
+
 <body>
-    <h1>양식4 input 속성</h1>
-    <input type="text" value="대한민국">
+    <form>
+        <h1>양식4 input 속성</h1>
+        <input type="text" autofocus placeholder="아이디를 입력하세요" disabled>
+        <br>
+        <input type="text" placeholder=kim required size="30" minlength="3" maxlength="5">
+        <br>
+        <input type="number" autofocus placeholder="나이를 입력하세요" max="120" min="0" step="1">
+        <br>
+        <input type="checkbox" checked>
+        <br>
+        <input type="submit" value="보내기">
+    </form>
 </body>
 </html>

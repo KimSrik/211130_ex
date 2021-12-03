@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양식 버튼</title>
+</head>
+<body>
+    <h1>양식 버튼</h1>
+
+    <!-- 
+        input 버튼은 그냥 눌려지는애.(마크업 아님)
+        무엇이 보내지는지는 만드는 사람에 따라 달라짐.
+        글만 보낼 수 있음
+
+        그냥 버튼은 markup태그이다.
+        (얘는 글 말고도 이미지도 버튼에 나타나게 할 수 있음)
+    -->
+
+    <form action="#">
+        <input type="text">
+        <input type="button" value="버튼">
+        <input type="submit" value="서버전송">
+        <input type="reset" value="입력취소">
+        <br>
+        <button type="button"><img src="./images/coffee.gif" alt="bs"></button>
+        <button type="submit">서버전송2</button>
+        <button type="reset">입력취소2</button>
+    </form>
+    
+</body>
+</html>
