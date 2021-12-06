@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자(selector)</title>
+
+    <!-- 
+        * 선택자는 모든 선택을 할 때 사용.
+
+    -->
+
+    <style>
+        /* 태그 선택자 */
+        div{
+            color:green;
+        }
+
+        /* 모든 선택자 */
+        *{
+            color:red;
+        }
+        
+        /* 클래스 선택자 */
+        .box{
+            color:blue;
+        }
+
+        /* id 선택자 */
+        #box{
+            color:cyan;
+        }
+
+        .menu1{
+            color:blue;
+        }
+
+        /*자손 선택자 */
+        li li{
+            color:yellow;
+        }
+
+        ul ul li{
+            color:darkcyan;
+        }
+
+        #edit li{
+            color:black;
+        }
+
+        .edit li{
+            color:white;
+        }
+
+        ul .edit li{
+            color:darkgreen;
+        }
+
+        /* 그룹 선택자 */
+        /* #box의 색상은 우선순위에서 밀려나서 색은 적용이 안된다. */
+        h1, #box{
+            font-size: 30px;
+            color: black;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>선택자(selector)</h1>
+    <div class="box" id="box" style="color:magenta">박스1</div>
+    <div>박스2</div>
+    <div class="box">박스3</div>
+
+    <nav>
+        <ul>
+            <li class="menu1">
+                파일
+                <ul>
+                    <li>새로만들기</li>
+                    <li>열기</li>
+                    <li>저장</li>
+                    <li>다른 이름으로 저장</li>
+                    <li>종료</li>
+                </ul>
+            </li>
+            <li class="edit" id="edit">
+                편집
+                <ul>
+                    <li>복사</li>
+                    <li>잘라내기</li>
+                    <li>붙여넣기</li>
+                    <li>찾기</li>
+                </ul>
+            </li>
+            <li class="menu1">
+                선택영역
+                <ul>
+                    <li>선택반전</li>
+                    <li>선택해제</li>
+                </ul>
+            </li>
+            <li class="menu1">
+                보기
+                <ul class>
+                    <li>미리보기</li>
+                    <li>확대보기</li>
+                    <li>축소보기</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>
