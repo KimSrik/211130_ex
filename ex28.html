@@ -43,6 +43,7 @@
 
         a{
             color:#000000;
+            text-decoration:none;
         }
 
         ul, ol, li{
@@ -57,48 +58,124 @@
             color: #222222;
         }
 
+        h1{
+            color: #000;
+            background-color: #000;
+            text-shadow:0   0   4px     #ccc,
+                        0   -5px 4px    #ff3,
+                        2px -10px 6px   #fd3,
+                        -2px -15px 11px   #f80,
+                        2px -19px 19px      #f20;
+        }
+
         /*
         굵기를 100단위로 설정할 수 있다. 
         굵기는 px 를 쓰면 안됨.
         수치를 적어도 되고 폰트 사이트에 적혀있는 단어여도 된다.
         */
-        li:nth-child(1){
+        ul li:nth-child(1){
             font-weight:100;
             font-size:24px;
         }
         
-        li:nth-child(2){
+        ul li:nth-child(2){
             font-weight:300;
             font-size:28px;
         }
 
-        li:nth-child(3){
+        ul li:nth-child(3){
             font-weight:500;
             font-size:32px;
         }
 
-        li:nth-child(4){
+        ul li:nth-child(4){
             font-weight:700;
             font-size:36px;
         }
 
-        li:nth-child(5){
+        ul li:nth-child(5){
             font-weight:900;
             font-size:40px;
         }
 
-        p{
+        ul li:last-child{
+            /* text-decoration-style: solid; */
+            /* text-decoration-color: #f00; */
+            /* text-decoration-line:underline; */
+            /* text-decoration: underline solid #f00; */
+            color:#ff0;
+            text-decoration: underline;
+        }
+
+
+        /* 
+        아래 문구는 시안 디자인에 맞춰서 작성하는것이 좋다.
+        
+        font-
+        */
+
+        p:first-of-type{
+            font-family:sans-serif;
             font-weight:500;
             font-size:24px;
+            font-style:italic;
+
+            /* font:24px/30px 500 sans-serif; */
             line-height:30px;
             color:#333333;
             text-align: center;
         }
 
-        
+        /* 
+        이름 표기법은 잘 안씀 
+        ol li{
+            color: red;
+        }
+        */
+
+        ol li:nth-child(1){
+            color: #ff0000;
+            /* ff0000 같이 두자리씩 같으면 f00으로 쓸수도 있다. */
+        }
+        ol li:nth-child(2){
+            color: #0f0;
+        }
+        ol li:nth-child(3){
+            color: #00f;
+        }
+        ol li:nth-child(4){
+            color: #ff0;
+        }
+        ol li:nth-child(5){
+            color: #0ff;
+        }
+        ol li:nth-child(6){
+            color: #f0f;
+        }
+        ol li:nth-child(7){
+            color: #fff;
+            background-color: #000;
+        }
+        ol li:nth-child(8){
+            color: #666;
+        }
+        ol li:nth-child(9){
+            color: #ccc;
+        }
+        p:last-of-type span:first-child{
+            text-transform:uppercase;
+        }
+        p:last-of-type span:nth-child(2){
+            text-transform:lowercase;
+        }
+        p:last-of-type span:nth-child(3){
+            text-transform:capitalize;
+        }
+
     </style>
 </head>
 <body>
+    <h1>글꼴 스타일</h1>
     <ul>
         <li>박스1</li>
         <li>박스2</li>
@@ -111,6 +188,25 @@
         대한민국
         <br>
         미국
+    </p>
+
+    <ol>
+        <li>box01</li>
+        <li>box02</li>
+        <li>box03</li>
+        <li>box04</li>
+        <li>box05</li>
+        <li>box06</li>
+        <li>box07</li>
+        <li>box08</li>
+        <li>box09</li>
+    </ol>
+
+    <p>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        <span>Vel officiis fuga eaque distinctio corrupti minus libero</span>
+        <span>laudantium veritatis maxime porro quia ratione qui,</span>
+        <span>ab optio perferendis, vero provident pariatur. Quidem.</span>
     </p>
     
 </body>

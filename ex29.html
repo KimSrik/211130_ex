@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29</title>
+    <style>
+
+
+
+        /* 
+        white-space 줄바꿈의 여부        
+        줄바꿈 없게 만드는 no wrap 
+
+        overflow 넘치는 부분을 처리를 어떻게 하는지 정할 수 있다.
+
+        text-overflow 는 넘치는부분을 어떻게 더 표현할지 정할 수 있다. 
+        ellipsis를 쓰면 ...으로 표현할 수 있다.
+        */
+        p{
+            width:500px;
+            white-space:nowrap;
+            /* background-color: #f00; */
+            text-overflow: ellipsis;
+
+            overflow:hidden;
+        }
+
+        #second-ptag{
+            letter-spacing: 10px;
+            word-spacing: 50px;
+        }
+        h1{
+            /* direction: : rtl; */
+            text-align: center;
+            font-stretch: 150%;
+        }
+
+        ul li:first-child{
+            text-indent: 20px;
+        }
+
+        li:nth-child(3){
+            font-size:30px;
+            line-height:1;
+        }
+
+        h2{
+            width:300px;
+            height:300px;
+            background-color: #eee;
+            text-align: center;
+            line-height:300px;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem placeat alias ipsam itaque cupiditate possimus mollitia, enim molestiae iste optio nemo atque autem ab, debitis culpa veniam voluptatibus ipsum libero.
+    </p>
+
+    <p id="second-ptag">
+        Lorem ipsum dolor sit amet.
+    </p>
+
+    <h1>大韓民國</h1>
+
+    <ul>
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam explicabo ipsa, aliquid et deserunt sint. Ex ullam, esse atque nostrum excepturi dolore, dignissimos, iusto consequatur quam fugiat praesentium illum quo.</li>
+        <li>박스4</li>
+        <li>박스5</li>
+    </ul>
+    
+    <h2>
+        대한민국
+        <br>
+        미국
+
+    </h2>
+
+</body>
+</html>
