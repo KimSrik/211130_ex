@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자6</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        a{
+            margin:50px;
+            text-decoration: none;
+            font-size:24px;
+            color:red;
+        }
+        a:hover{
+            color: green;
+        }
+
+        div, section::before, section::after{
+            height:500px;
+            margin:50px;
+
+            font-size:100px;
+            text-align: center;
+            line-height: 500px;
+        }
+
+        div:nth-child(1){
+            background-color: red;
+        }
+
+        div:nth-child(2){
+            background-color: green;
+        }
+
+        div:nth-child(3){
+            background-color: blue;
+        }
+  
+        /* 타겟선택자 */
+        :target{
+            background-color: cyan;
+        }
+
+        /* 가상 요소 선택자(중요) */
+        /* 
+        before, after 가상요소를 사용할 떄
+        무조건 content, display를 써야 한다.
+        */
+        section::before{
+            content:'박스00';
+            display:block;
+            background-color: yellow;
+        }
+
+        section::after{
+            content:'박스04';
+            display:block;
+            background-color: black;
+            color: white;
+        }
+
+        p::first-letter{
+            font-size: 50px;
+        }
+
+        p::first-line{
+            color: red;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>선택자6</h1>
+    <a href="#box01">box01</a>
+    <a href="#box02">box02</a>
+    <a href="#box03">box03</a>
+
+    <section>
+        <div id="box01">박스1</div>
+        <div id="box02">박스2</div>
+        <div id="box03">박스3</div>
+    </section>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat quo asperiores quae corporis dolorum tenetur placeat porro, corrupti cumque. In officiis placeat hic perferendis aliquam itaque? Incidunt, inventore perspiciatis.
+        Alias, est. Autem neque, optio, rerum ipsa asperiores praesentium debitis dolores sequi eum quod quos mollitia, officiis ex aspernatur similique ea vel suscipit! Ad debitis est voluptates laborum, adipisci hic.
+        Asperiores voluptas dolorum, vitae ab id quis velit animi possimus aliquid quasi excepturi omnis. Explicabo at rerum reprehenderit pariatur, alias libero et asperiores doloribus eum quod animi maxime a laboriosam?
+        Illo aliquam adipisci, obcaecati sint consequatur nesciunt magni inventore error animi ab deserunt sapiente! Blanditiis accusantium, quas quo eligendi aspernatur fuga ratione excepturi natus esse exercitationem officia suscipit unde qui!
+        Cum veritatis tenetur dolor a nihil, rerum consequuntur incidunt, necessitatibus debitis odio quod. Ex velit explicabo eveniet ullam repudiandae similique repellat, laudantium vero! Molestias asperiores eaque sit, numquam reprehenderit non.
+        Modi ut minima, voluptas possimus eligendi consectetur magnam odit quas molestias. Et iusto reprehenderit ullam, aspernatur quod illum asperiores porro. At similique suscipit deleniti optio. Quo, id! Nobis, delectus temporibus.
+        Enim provident mollitia repellendus? Sunt facere ex illo ad quod magni nihil odit modi debitis dolore rem earum maxime sit optio ratione facilis libero molestiae sint, asperiores dolorum enim expedita!
+        Neque et assumenda earum. Ea, blanditiis aliquam dolores ab rem dolorum unde! Error expedita, dignissimos perspiciatis eligendi nisi, maiores laboriosam, praesentium placeat amet natus provident asperiores magnam reprehenderit debitis iusto!
+        Sit quas magnam tempora labore autem doloremque accusamus, reiciendis cupiditate illum enim, dignissimos modi voluptas natus odit esse omnis nesciunt, voluptates ratione fuga nam sapiente aspernatur! Nihil doloremque fugiat sunt!
+        Optio, quam non eligendi autem nostrum assumenda voluptates itaque culpa ut eveniet doloremque! Sequi hic doloremque quidem, neque ducimus deleniti minima aut sunt, soluta, sint voluptas voluptate? Architecto, nulla alias?
+    </p>
+</body>
+</html>

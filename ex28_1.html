@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속, 우선순위</title>
+    <style>
+        body, head{
+            font-size:10px;
+        }
+        :root{
+            font-size:100px;
+        }
+        body, head{
+            font-size: 100px;
+        }
+
+        /* 
+        웹 표준.
+        -가 들어가는건 접두사 
+        설정을 안해주면 특정 브라우저에서 안될 수 있고,
+        아니면 플러그인을 사용해야한다.
+        */
+        h1{
+            columns:20px;
+            -moz-columns:20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>상속, 우선순위</h1>
+    
+</body>
+</html>

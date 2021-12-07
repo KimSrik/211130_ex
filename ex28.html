@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <title>글꼴 스타일</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+       :root{
+            font-family: 'Roboto', 'Gugi', sans-serif;
+       }
+
+       h1:nth-child(3){
+           font-family: 'Gugi', sans-serif;
+       } */
+
+        /* 
+            src 끝에 format() 써서 어떤 타입인지
+            써주면 더 좋다.
+        
+
+        @font-face {
+            font-family: jua;
+            src: url(./fonts/Jua.ttf) ;
+        }
+        */
+
+        /* 
+        문서를 처음에 만들때 기초 틀을 만드는 것을 CSS리셋이라 한다.
+        */
+
+        /* CSS Reset */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            color:#000000;
+        }
+
+        ul, ol, li{
+            list-style: none;
+        }
+
+        /* 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        :root{
+            font-family:'Roboto', 'Noto Sans KR', sans-serif;
+            font-size:14px;
+            color: #222222;
+        }
+
+        /*
+        굵기를 100단위로 설정할 수 있다. 
+        굵기는 px 를 쓰면 안됨.
+        수치를 적어도 되고 폰트 사이트에 적혀있는 단어여도 된다.
+        */
+        li:nth-child(1){
+            font-weight:100;
+            font-size:24px;
+        }
+        
+        li:nth-child(2){
+            font-weight:300;
+            font-size:28px;
+        }
+
+        li:nth-child(3){
+            font-weight:500;
+            font-size:32px;
+        }
+
+        li:nth-child(4){
+            font-weight:700;
+            font-size:36px;
+        }
+
+        li:nth-child(5){
+            font-weight:900;
+            font-size:40px;
+        }
+
+        p{
+            font-weight:500;
+            font-size:24px;
+            line-height:30px;
+            color:#333333;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>박스3</li>
+        <li>박스4</li>
+        <li>박스5</li>
+    </ul>
+
+    <p>
+        대한민국
+        <br>
+        미국
+    </p>
+    
+</body>
+</html>
