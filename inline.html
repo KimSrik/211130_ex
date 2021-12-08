@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인박스</title>
+    <style>
+
+    /* 
+        display는 보여질 때 ~
+    */
+
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 0;
+            display:block;
+        }
+
+        .box01{
+            background: #f00;
+        }
+
+        .box02{
+            background: #0f0;
+        }
+
+        .box03{
+            background: #00f;
+        }
+
+        .par-box{
+            width: 900px;
+            height: 300px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .child-box{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+        }
+
+        .child-box01{
+            background: #f00;
+        }
+
+        .child-box02{
+            background: #0f0;
+        }
+
+        .child-box03{
+            background: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>인라인박스</h1>
+    <div class="box box01">box01</div>
+    <div class="box box02">box02</div>
+    <div class="box box03">box03</div>
+
+    <div class="par-box">
+        <div class="child-box child-box01"></div>
+        <div class="child-box child-box02"></div>
+        <div class="child-box child-box03"></div>
+    </div>
+</body>
+</html>

@@ -79,7 +79,12 @@
             border: 20px dashed #000;
             padding:50px;
         }
-
+            /* 
+            origin은 border-box가 기본이다 
+            repeat는 repeat가 기본.
+            position은 left top이 기본.
+            attachment는 scroll이 기본.
+            */
         #box05{
             background: url(./images/image-html.jpg) no-repeat center/cover border-box;
         }
@@ -92,17 +97,35 @@
             background: url(./images/image-js.jpg) no-repeat center/cover content-box;
         }
 
+        #box08{
+            background: #f00 url(./images/coffee2.svg) no-repeat center/contain;
+        }
+
+        #box09{
+            background: url(./images/coffee4.jpg) no-repeat center/cover;
+            background-attachment: fixed;
+        }
+
+        #box10{
+            background: url(./images/coffee3.png) no-repeat center/cover;
+            
+        }
+
     </style>
 </head>
 <body>
     <h1>배경 스타일2</h1>
-    <div class="box" id="box01">박스1</div>
-    <div class="box" id="box02">박스2</div>
-    <div class="box" id="box03">박스3</div>
-    <div class="box" id="box04">박스4</div>
-    <div class="box" id="box05">박스5</div>
-    <div class="box" id="box06">박스6</div>
-    <div class="box" id="box07">박스7</div>
+    <div class="box" id="box01"></div>
+    <div class="box" id="box02"></div>
+    <div class="box" id="box03"></div>
+    <div class="box" id="box04"></div>
+    <div class="box" id="box05"></div>
+    <div class="box" id="box06"></div>
+    <div class="box" id="box07"></div>
+    <div class="box" id="box08"></div>
+    <div class="box" id="box09"></div>
+    <div class="box" id="box10"></div>
+
 
     
 </body>

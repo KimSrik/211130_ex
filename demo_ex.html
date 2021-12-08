@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 노토 산스 코리안 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <title>DEMO</title>
+    <style>
+        /* css reset */
+        *{
+            margin:0;
+            padding:0;
+        }
+        :root{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size:16px;
+            font-weight: 100;
+        }
+
+        /* rem은 root em이여서 루트에 1배이다. */
+        h1{
+            font-size:1rem;
+            font-weight:400;
+        }
+
+        .wrap{
+            height:200px;
+            background: #f00;
+        }
+
+        .sec01{
+            background: #0f0;
+        }
+
+        .bdr-black{
+            border:5px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap sec01 bdr-black"></section>
+    <section class="wrap sec02"></section>
+    
+</body>
+</html>

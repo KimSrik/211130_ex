@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 노토 산스 코리안 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <title>DEMO</title>
+    <style>
+        /* css reset */
+        /* rem은 root em이여서 루트에 1배이다. 
+        h1{
+            font-size:1rem;
+            font-weight:400;
+        }
+        */
+
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        :root{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size:16px;
+            font-weight: 100;
+        }
+
+        /* 100vh는 viewport height의 줄임말로 100퍼센트 퓨포트 높이를 가진다. */
+        .wrap>*{
+            height:100vh;
+        }
+
+        h1, h2{
+            width:200px;
+            margin:0 auto;
+            padding:10px;
+            background:rgba(0,0,0,0.3);
+            text-align: center;
+            color:#fff;
+        }
+
+        .par-txt{
+            background:none;
+            color:#333;
+        }
+
+        p{
+            font-size:14px;
+            color:#999;
+            line-height: 1.7;
+        }
+
+        /*
+        아래와 같이 공통으로 주는 것들을 동일하게 준 뒤
+        따로 다른 것은 축약형으로 쓰면 안된다. 
+        */
+        .header, .parallax02, .parallax04, .footer{
+            background: no-repeat center/cover fixed;
+        }
+
+        .parallax01, .parallax03, .parallax05{
+            box-sizing: border-box;
+            height:auto;
+            padding:60px;
+        }
+
+        .header{
+            background-image: url(./images/coffee.gif);
+        }
+
+        .parallax02{
+            background-image: url(./images/coffee2.svg);
+        }
+
+        .parallax04{
+            background-image: url(./images/coffee3.png);
+        }
+
+        .footer{
+            background-image: url(./images/coffee4.jpg);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>parallax</h1>
+        </header>
+        <section class="sec parallax01">
+            <h2 class="par-txt">parallax text</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti obcaecati exercitationem quasi enim fuga aut mollitia cum praesentium soluta qui inventore nisi libero. Cum consectetur quibusdam qui architecto quas!
+                Accusamus, rerum minima fugiat ex eaque magnam aliquid earum, unde adipisci excepturi eius ab nihil perferendis deleniti est dolorem autem molestiae. Amet deleniti sed, commodi cumque modi molestias veniam quasi?
+                Modi ab exercitationem nemo voluptates ipsa ut reprehenderit, eum explicabo qui enim distinctio natus molestiae eligendi, nulla, quam cumque. Sint odit voluptatem perferendis dicta error quaerat soluta porro similique repellat!
+                Provident esse saepe aspernatur omnis molestias blanditiis! Debitis commodi molestias eligendi vitae repudiandae ratione eveniet quis quos pariatur, adipisci voluptatem. Quos totam quis tenetur, recusandae placeat veritatis accusamus culpa nesciunt?
+                Voluptatem inventore sint repudiandae alias distinctio veniam aliquid, voluptatibus, ex natus perferendis numquam nam necessitatibus officia dolor voluptates dignissimos a eveniet et ad quibusdam! Aliquam nihil blanditiis eligendi expedita nam?
+            </p>
+        </section>
+        <section class="sec parallax02">
+            <h2>scroll</h2>
+        </section>
+        <section class="sec parallax03">
+            <h2 class="par-txt">parallax text</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos facere nemo delectus nesciunt! Maiores facilis ab nihil nisi voluptatum modi obcaecati cupiditate, praesentium culpa vitae vero sequi, consequatur eveniet?
+                Consectetur quas laborum eaque perferendis consequatur aut dolorum veniam est accusantium? Enim nesciunt mollitia reiciendis velit obcaecati. Sint facere hic nihil exercitationem at molestias dolores laudantium non, optio rem nesciunt!
+                Distinctio ut accusantium, eos, quibusdam consectetur laborum vero quaerat ducimus maxime non libero qui officiis molestiae facere ipsa, quia earum mollitia commodi labore suscipit repellendus facilis! Nostrum reprehenderit facere repellat!
+            </p>
+        </section>
+        <section class="sec parallax04">
+            <h2>scroll</h2>
+        </section>
+        <section class="sec parallax05">
+            <h2 class="par-txt">parallax text</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus magni ducimus quod, odit tempora dignissimos nulla officia quos asperiores possimus veritatis cupiditate unde nesciunt minus consequuntur modi, ad maxime inventore.
+                Nulla, similique consectetur distinctio ipsam saepe mollitia tempore, voluptatum sequi vel est corporis nobis. Delectus asperiores dolores nesciunt earum eveniet ad modi libero? Quae minima repellat aut consequuntur dolorem corporis!
+                Quisquam expedita sit quaerat provident soluta nisi dolore enim qui cumque accusamus, itaque unde amet id blanditiis voluptatum sapiente vel placeat ad facere ex non similique quidem deleniti eveniet? Sint!
+                Ipsum consequuntur, recusandae quod illo quidem quae veritatis similique minima aliquam debitis fugit perspiciatis inventore praesentium in deserunt, fugiat omnis a enim expedita saepe eaque dolore! Quibusdam fuga eos sequi!
+            </p>
+        </section>
+        <footer class="footer">
+            <h2>parallax</h2>
+        </footer>
+    </section>        
+</body>
+</html>
