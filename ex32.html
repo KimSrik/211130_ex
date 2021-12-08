@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 스타일2</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+
+        /* transparent는 투명 */
+        .box{
+            box-sizing:border-box;
+
+            width:1400px;
+            height:800px;
+            margin:20px auto;
+            border: 2px solid #000;
+
+        }
+
+        /* 
+            content-box 컨텐츠 자체 크기
+            padding-box 
+            border-box  테두리+여백+컨텐츠 크기
+            
+            padding 박스 안쪽의 여백
+
+            background-clip는 배경을 어디까지만 지정하는지 정할 수 있다.
+            (박스의 크기는 같다.)
+
+            빈 공간 없이 다 채울 경우 cover (위 아래가 짤릴수 있음)
+
+            짤리는 경우 없이 contain(좌우에 공간이 생기기도 함)
+
+            축약형으로 쓸때 포지션/크기조정은 같이 써야함.
+            
+        */
+
+        #box01{
+            background-image: url(./images/coffee.gif);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: contain;
+        }
+
+        #box02{
+            background-image: url(./images/coffee2.svg);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: cover;
+        }
+
+        #box03{
+            /* background-color: #00f; */
+            /* background-clip: content-box; */
+            background-image: url(./images/coffee3.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: contain;
+
+        }
+
+        #box04{
+            /* background-color: #00f; */
+            /* background-clip: content-box; */
+            /* background-image: url(./images/coffee4.jpg); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center top; */
+            background: url(./images/coffee4.jpg) no-repeat center/contain;
+            /* background-size: contain; */
+        }
+
+        #box05, #box06, #box07{
+            border: 20px dashed #000;
+            padding:50px;
+        }
+
+        #box05{
+            background: url(./images/image-html.jpg) no-repeat center/cover border-box;
+        }
+
+        #box06{
+            background: url(./images/image-css.jpg) no-repeat center/cover padding-box;
+        }
+
+        #box07{
+            background: url(./images/image-js.jpg) no-repeat center/cover content-box;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>배경 스타일2</h1>
+    <div class="box" id="box01">박스1</div>
+    <div class="box" id="box02">박스2</div>
+    <div class="box" id="box03">박스3</div>
+    <div class="box" id="box04">박스4</div>
+    <div class="box" id="box05">박스5</div>
+    <div class="box" id="box06">박스6</div>
+    <div class="box" id="box07">박스7</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 스타일</title>
+    <style>
+
+        /* 
+            앞에 붙는 기호 = 불릿 기호
+            list-style-type는 불릿 기호들의 모양을 바꿀 수 있다.
+            list-style-position는 불릿 기호를 박스 안으로 넣느냐 아니냐를 바꿀 수 있다.
+            list-style-image는 자신이 원하는 그림으로도 불릿 기호를 나타낼수 있다.
+            이 때 경로는 url이라는 함수를 써서 괄호안에 경로를 기입해준다.
+        */
+
+        ul{
+            /* list-style-type: none; */
+            list-style-position: outside;
+            list-style-image: url(./images/coffee2.svg);
+        }
+
+        ol{
+            list-style: disc;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>목록스타일</h1>
+    <h2>순서없는 목록(ul)</h2>
+    <ul>
+        <li>순서없는 목록1</li>
+        <li>순서없는 목록2</li>
+        <li>순서없는 목록3</li>
+        <li>순서없는 목록4</li>
+        <li>순서없는 목록5</li>
+    </ul>
+    
+    <h2>순서있는 목록(ul)</h2>
+    <ol>
+        <li>순서없는 목록1</li>
+        <li>순서없는 목록2</li>
+        <li>순서없는 목록3</li>
+        <li>순서없는 목록4</li>
+        <li>순서없는 목록5</li>
+    </ol>
+
+</body>
+</html>
