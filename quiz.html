@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        .clearfix::after{
+            content:'';
+            display: block;
+            clear:both;            
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+        a{
+            color:#000;
+            text-decoration: none;
+        }
+        .wrap{
+            width:1200px;
+            margin:0 auto;
+        }
+        .wrap>*{
+            padding: 20px;
+        }
+        .header{
+            background-color: gray;
+        }
+        .header h1{
+            text-align: center;
+        }
+        .aside{
+            float:left;
+            background-color:darkgray;
+            width:25%;
+            height:300px;
+        }
+        .aside nav li{
+            margin-bottom:20px;
+            font-size:20px;
+        }
+        .section{
+            float:right;
+            background-color: lightgray;
+            width:75%;
+            height:300px;
+        }
+        .footer{
+            background-color: gray;
+            clear:both;
+            height:80px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>사이트제목</h1>
+        </header>
+        <!-- 원래 아래 두 부분을 묶어주는것이 좋다. -->
+        <aside class="aside">
+            <nav>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">지점찾기</a></li>
+                    <li><a href="#">제품소개</a></li>
+                    <li><a href="#">투자정보</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>       
+            </nav>   
+        </aside>
+        <section class="section">
+            <h2>본문제목</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil aspernatur molestias ratione doloribus illo odit dolore minima repudiandae quasi harum. Vero nemo non provident exercitationem veritatis, at iure ex aspernatur.
+            Suscipit dolore voluptate velit blanditiis odit placeat dolores, cumque perferendis neque nostrum magni porro officia rerum, dolor, aperiam eius ratione omnis quos esse maiores soluta tempore harum beatae impedit? Quas!
+            Praesentium modi voluptatibus minima similique adipisci nemo quisquam deserunt magni. Similique culpa harum nemo natus magni repellat rerum? Sapiente accusamus maxime autem iste eius eligendi doloribus laboriosam. Architecto, illum tempore.
+            Accusamus quasi accusantium labore vel corporis nihil sint beatae consectetur non officia facere, incidunt voluptatem, corrupti ex tempora? Ratione officiis at voluptatibus dolorum voluptates placeat, accusamus hic unde a optio?
+            Unde corporis veniam quia, excepturi non eius quos tempora laudantium, impedit, a eligendi reiciendis. Voluptatem, quibusdam deserunt? Aspernatur nemo culpa eum nulla? Dicta sapiente enim, eveniet perferendis quam quas temporibus.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <address>주소</address>
+        </footer>
+    </section>
+</body>
+</html>

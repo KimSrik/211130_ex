@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float clear</title>
+
+    <style>
+        /* 
+        가상 요소 선택자
+        가상 요소들은 무조건 내용이 있어야 한다.
+        보여줄 내용이 있다면 content를 사용해서 넣어주면 되고
+        없으면 아래와 같이 공백으로 기입해도 된다.
+        그리고 어떻게 표시할지 display를 써야한다.
+        */
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .box, .clearfix{
+            border:1px solid #000;
+            padding:10px;
+            margin: 20px;
+        }
+        .box01, .box04{
+            float:left;
+            background: #f00;
+        }
+        .box02, .box05{
+            float:right;
+            background-color: #0f0;
+        }
+        /* float에 의해 위치가 바뀌는것을 방지함 */
+        .box03{
+            clear:both;
+        }
+
+        .par-box{
+            border:2px solid #f00;
+            padding:10px;
+        }
+        .par-box>div{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>float clear</h1>
+    <div class="box">
+        <div class="box01">박스1</div>
+        <div class="box02">박스2</div>
+        <div class="box03">박스3</div>
+    </div>
+    <!-- 
+        가상요소를 사용해서 한다.
+     -->
+    <div class="clearfix">
+        <!-- ::before -->
+        <div class="box04">박스04</div>
+        <div class="box05">박스05</div>
+        <!-- ::after -->
+    </div>
+
+    <div class="par-box clearfix">
+        <div class="child-box01">자식1</div>
+        <div class="child-box02">자식2</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cupiditate iure dolor inventore explicabo quo ut aspernatur reprehenderit eius repudiandae. Est quidem ab alias voluptatem repellendus ea veritatis numquam quis?</p>
+    <h3>제목</h3>
+    <img src="./images/coffee2.svg" alt="커피">
+
+</body>
+</html>

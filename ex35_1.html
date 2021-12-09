@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션(position)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            /* 
+            position은 기존 박스 관련 모델과 관련 없이
+            원하는 위치에 레이아웃을 할 수 있다.
+            fixed는 브라우저 기준.
+            static는 기본값이고, 좌표랑 상관없이 문서의 흐름대로 표시.
+
+
+            transform 애니메이션과 관련된 것이다.
+
+            아래 4줄은 브라우저 가운데로 오기 위한 코드이다.
+            */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+            
+            width:600px;
+            height:600px;
+
+            border:1px solid #000;
+            padding:20px;
+
+            /* 
+            overflow는 넘쳤을 경우 처리하는 방법을 선택할 수 있다. 
+            auto는 넘칠 경우에는 스크롤 막대를 나오게 하고
+            아닐 경우엔 없어진다.
+            */
+            overflow: hidden;
+        }
+
+        .box *{
+            /* 레이아웃 관련 스타일 */
+            
+
+            /* 박스모델 관련 스타일 *
+            /* 너비 높이 마진 보더 패딩 순으로 적는게 좋다 */
+            width: 250px;
+            height:250px;
+            padding: 20px;
+
+
+            /* 컨텐츠 관련 스타일 */
+            font-weight:900;
+            font-size:32px;
+            text-align: center;
+            line-height: 260px;
+            /* 박스 크기를 확인하고 줘야 세로 중간으로 오는것도 정확하다. */
+        }
+        /* 
+        absolute는 가까운 조상을 조사를 하는데
+        그 조상이 (아래 경우는 box01의 조상은 box이다)
+        포지션 속성을 가지고 있다면 그 속성을 따라간다.
+        */
+        .box01{
+            position:absolute;
+            right: 0;
+            top: 0;
+            z-index:5;
+        }
+        .box02{
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:4;
+        }
+        .box03{
+            position:absolute;
+            left:0;
+            bottom:0;
+            z-index:3;
+        }
+        .box04{
+            position:absolute;
+            right:0;
+            bottom:0;
+            z-index:2;
+        }
+        .box05{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%);
+            z-index:1;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="box01" style="background:red;">박스1</div>
+        <div class="box02" style="background:green;">박스2</div>
+        <div class="box03" style="background:blue;">박스3</div>
+        <div class="box04" style="background:cyan;">박스4</div>
+        <div class="box05" style="background:magenta;">박스5</div>
+    </div>
+    
+
+ 
+</body>
+</html>

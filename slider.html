@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .slider{
+            position:relative;
+            width:1280px;
+            height:600px;
+            margin:50px auto;
+            padding:6px;
+            box-shadow: 2px 2px 2px #666;
+            overflow: hidden;
+        }
+
+        .slide{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            opacity:0;
+            transition:opacity 3s;
+        }
+        /* 
+        opacity는 불투명도 0이면 투명하고 1이면 선명하다.
+        transition은 애니메이션 효과인데 뒤에 속성에
+        적용될 이름을 적고 그 이름이 변하는데 걸리는 시간을 적어주면
+        그 시간동안 서서히 변하게끔 할 수 있다.
+        */
+
+        .slide.active{
+            opacity:1;
+        }
+
+        .btn-page{
+            position:absolute;
+            left:50%;
+            bottom:40px;
+            transform: translate(-50%,0);
+            z-index:6;
+        }
+        .btn{
+            display: inline-block;
+
+            width:20px;
+            height:20px;
+            margin:0 10px;
+            border-radius: 10px;
+            background:#999;
+
+            text-indent: -99999px;
+            text-align: center;
+            cursor: pointer;
+            /* 
+            cursor은 마우스를 올렷을때
+            커서의 모양을 변경할 수 있다.
+             */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>슬라이더</h1>
+    <div class="slider">
+        <div class="slide slider01 active" id="slide01">
+            <img src="./images/christmas01.jpg" alt="크리스마스1">
+        </div>
+        <div class="slide slider02" id="slide02">
+            <img src="./images/christmas02.jpg" alt="크리스마스2">
+        </div>
+        <div class="slide slider03" id="slide03">
+            <img src="./images/christmas03.jpg" alt="크리스마스3">
+        </div>
+        <div class="slide slider04" id="slide04">
+            <img src="./images/christmas04.jpg" alt="크리스마스4">
+        </div>
+        <div class="slide slider05" id="slide05">
+            <img src="./images/christmas05.jpg" alt="크리스마스5">
+        </div>
+        <div class="btn-page">
+            <div class="btn btn01" id="btn01">1</div>
+            <div class="btn btn02" id="btn02">2</div>
+            <div class="btn btn03" id="btn03">3</div>
+            <div class="btn btn04" id="btn04">4</div>
+            <div class="btn btn05" id="btn05">5</div>
+        </div>
+    </div>
+    <script>
+        let slide01 = document.getElementById('slide01');
+        let slide02 = document.getElementById('slide02');
+        let slide03 = document.getElementById('slide03');
+        let slide04 = document.getElementById('slide04');
+        let slide05 = document.getElementById('slide05');
+
+        let btn01 = document.getElementById('btn01');
+        let btn02 = document.getElementById('btn02');
+        let btn03 = document.getElementById('btn03');
+        let btn04 = document.getElementById('btn04');
+        let btn05 = document.getElementById('btn05');
+
+
+        // 1번 슬라이드 보기
+        btn01.addEventListener('click', function(){
+            slide01.classList.add('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+        // 2번 슬라이드 보기
+        btn02.addEventListener('click', function(){
+            slide01.classList.remove('active');
+            slide02.classList.add('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+        // 3번 슬라이드 보기
+        btn03.addEventListener('click', function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.add('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+        // 4번 슬라이드 보기
+        btn04.addEventListener('click', function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.add('active');
+            slide05.classList.remove('active');
+        });
+        // 5번 슬라이드 보기
+        btn05.addEventListener('click', function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.add('active');
+        });
+
+        
+    </script>
+    
+</body>
+</html>

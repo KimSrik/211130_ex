@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+            margin:0;
+            padding:0;
+        }
+
+        /* 
+        position을 relative로 선택한 이유는
+        relative를 기준으로 움직이게 하려고 쓴다.
+        ( 기본적으로 위치 자체가 바뀌거나 하진 않는다.)
+        위치를 잡아 줄 때 사용한다.
+
+        absolute가 fixed보다 우선순위가 높다.
+
+        fixed는 브라우저 기준.
+
+        absolute는 조상중에 position을 쓴 적 있는 것 기준으로.
+        */
+
+        .par-box{
+            position: relative;
+
+            width:642px;
+            height:242px;
+            margin:20px auto;
+            border:1px solid #000;
+            padding:20px;
+        }
+        /* 
+        조상중에 position이 나오지 않았다면 브라우저 기준으로 된다.
+        */
+        .par-box>div{
+            position:absolute;
+
+            width:200px;
+            height:200px;
+            top: 20px;
+        }
+
+        .child-box01{
+            position:absolute;
+            left:0px;
+            top:0px;
+            background: #f00;
+            left:20px;
+        }
+
+        .child-box02{
+            position:absolute;
+            left:220px;
+
+            background: #0f0;
+        }
+        
+        /* 
+        아래와 같이 우선순위를 올려주거나 important를 써야한다.
+        가급적이면 우선순위를 찾아서 더 상위 우선순위를 갖게 하거나
+        같은 우선순위라면 뒤에 적어서 실행되게끔 해야한다.
+        
+        */
+        .par-box>.child-box03{
+            position:fixed;
+            left:420px;
+
+
+            background: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box01">자식1</div>
+        <div class="child-box02">자식2</div>
+        <div class="child-box03">자식3</div>
+    </div>
+</body>
+</html>

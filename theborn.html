@@ -8,9 +8,15 @@
     <link rel="shortcut icon" href="./images/theborn.png">
     <title>더본코리아</title>
     <style>
+        /* 
+        float와 clearfix는 짝이다
+        clearfix라는 클래스이름을 가진 곳에서 after이라는 가상요소를 가진다.
+        clearfix는 float를 사용한 부모클래스에 써주면 된다.
+
 
         /* CSS Reset */
         *{
+            box-sizing: border-box;
             margin:0;
             padding:0;
         }
@@ -25,8 +31,25 @@
         }
 
         .header{
-            box-shadow:0 2px 2px rgba(0,0,0,0.5);
+            box-shadow:0 2px 2px rgba(0,0,0,0.3);
         }
+
+        
+        
+
+        /* .main-logo{
+            position:absolute;
+            left: 20px;
+            top: 50%;
+            transform: translate(0,-50%);
+        } */
+
+        /* .nav{
+            position:absolute;
+            right: 20px;
+            top:50%;
+            transform: translate(0, -50%);
+        } */
 
         .container{
             width:960px;
@@ -34,42 +57,57 @@
             padding:30px 0;
 
         }
+
         .container:hover{
             border-bottom:1px solid #a73232;
             
         }
 
-        .main-logo, .nav, .nav li{
+        .main-logo,.nav,.nav li{
             display:inline-block;
         }
 
-        .main-logo{
+        .main-logo{            
             margin-right:100px;
         }
 
+        /* 
+        float는 소스상에서는 컨테이너가 네비게이션을 갖고 있는 것으로 되있지만
+        실행해서 확인을 하면 float를 썼기 때문에 표현할 때(논리적으로)는 독립적으로 나오게 된다.
+        개발자 도구에서 확인하면 컨텐츠 박스에 아무것도 없는것처럼 나오게 된다.
+        */
         .nav li{
-            margin: 0 10px;
-            font-size:16px;
-            font-weight: 600;
+            margin:0 10px;
+            font-weight:600;
+            font-size:15px;
         }
 
         .nav a:hover{
             color:rgb(167, 50, 50);
         }
 
+
+
+      
+
+        /* 
+        float를 사용하면 독립적이 되버리기 때문에 container가 사라져버리기 때문에
+        tmp 임시 div를 만들어서 해결을 했다.
+        */
+
     </style>
 </head>
 <body>
     <section class="wrap">
         <header class="header" id="header">
-            <div class="container" id="container">
+            <div class="container clearfix" id="container">
                 <h1 class="main-logo">
                     <a href="#">
                         로고
                     </a>
                 </h1>
                 <nav class="nav">
-                    <ul>
+                    <ul class="clearfix">
                         <li><a href="#">더본코리아</a></li>
                         <li><a href="#">브랜드</a></li>
                         <li><a href="#">매장찾기</a></li>

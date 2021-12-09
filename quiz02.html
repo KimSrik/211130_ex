@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 레이아웃 - 3단 레이아웃</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        .clearfix::after{
+            content:'';
+            display: block;
+            clear:both;            
+        }
+
+        .wrap>*{
+           
+        }
+
+        .header{
+            /* 레이아웃 */
+            /* 박스모델 */
+            /* 나머지 기타 등등 속성 */
+            padding: 20px;
+            background-color: darkgray;
+            font-weight: 700;
+            font-size:32px;
+            color:#222;
+        }
+
+        .wrap{
+            width:1200px;
+            margin:0 auto;
+        }
+
+        .main{
+            padding: 0;
+        }
+
+        .main>*{
+            padding:20px;
+            height:500px;
+            float:left;
+        }
+
+        .aside{
+            width:25%;
+            
+            background-color: gray;
+        }
+
+        .section{
+
+            width:50%;
+            background-color: lightgray;
+        }
+
+        .footer{
+            padding:20px;
+
+            background-color: darkgray;
+            height:80px;
+
+            color:#222;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>사이트제목</h1>
+        </header>
+        <section class="main clearfix">
+            <aside class="aside">
+                사이드바1
+            </aside>
+            <section class="section">
+                본문   
+            </section>
+            <aside class="aside">
+                사이드바2
+            </aside>   
+        </section>
+        <footer class="footer">
+            주소
+        </footer>
+    </section>
+    
+</body>
+</html>

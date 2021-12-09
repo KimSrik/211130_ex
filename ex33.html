@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 표준</title>
+    <style>
+
+        /* 
+        이미지는 넓이만 설정해주면 알아서 비율을 맞춰서 크기 조절을 해준다.
+        왜곡이 없이.
+
+        %로 크기를 설정하게 되면 이미지의 사이즈가 100%가 되는데,
+        부모의 크기(요소)로부터 상속받게 된다.
+
+        display를 inline으로 하게 되면 크기조절을 할 수가 없다.
+
+        float으로 설정하게 되면 빈공간으로 올라오게 된다.
+        */
+        .img-box{
+            width:300px;
+            float:right;
+        }
+
+        img{
+            width:100%;
+            
+        }      
+        
+        p{
+            display:inline;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>웹표준</h1>
+    <h2>HTML5</h2>
+ 
+    <!-- 
+        나중에 레이아웃 잡을 때 편하려면 
+        클래스명을 가진 div에 묶어서 img를 삽입하는게 좋다.
+
+    -->
+
+
+    <div class="img-box">
+        <img src="./images/image-html.jpg" alt="html5 이미지">
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat molestias esse officiis dolore numquam delectus eveniet perspiciatis, similique ullam provident culpa repudiandae incidunt sequi ipsa praesentium distinctio aliquid nihil reiciendis!
+        Ipsa adipisci error ab ea distinctio voluptatibus dolor voluptate libero neque earum natus perferendis minus, aut voluptas aliquid saepe voluptatem deserunt nobis assumenda ipsam. Aut cupiditate dolorem cum minima eos!
+        Vel voluptas, odit in dolore voluptatibus aut recusandae dolorum soluta corrupti nam! Praesentium veritatis fugiat minima, consequatur necessitatibus nemo, pariatur quas et libero similique sint velit atque! Doloremque, ratione unde.
+        Nam ab optio odit, obcaecati fuga officia expedita dolorem consectetur nostrum facere quasi possimus recusandae deleniti commodi dignissimos cupiditate mollitia veritatis magnam consequatur sapiente tenetur debitis nisi enim. Reiciendis, dolores!
+        Temporibus facere rerum, ex, eius libero, vitae quidem vel eos voluptates atque ipsum corrupti cumque aliquid excepturi corporis quasi. Consequatur perferendis ratione illo iusto deleniti facilis, fugiat facere quidem eius!
+        Amet consectetur inventore hic accusamus natus quasi assumenda esse consequuntur, aliquid quia suscipit cum omnis minus dignissimos officia facere repellat ducimus qui, possimus quis. Reprehenderit quod ipsam perspiciatis nemo consequatur?
+        Esse id assumenda reprehenderit. Suscipit eum nesciunt eius unde non perferendis exercitationem quod veniam, placeat pariatur deleniti natus temporibus minus. Ipsam cum unde illum, minima quae quidem! Molestiae, quibusdam minima?
+        Sequi dolores sapiente consequatur voluptatibus saepe aliquid debitis facilis consectetur numquam non repellat maiores minima facere consequuntur amet porro repudiandae, temporibus corporis laboriosam assumenda aliquam, nulla qui error! Error, rerum.
+        Sed, nihil ipsum doloribus placeat omnis expedita cupiditate! Magnam sit voluptatem magni doloremque iure dolorem sunt, aliquid soluta consequuntur id perferendis asperiores et esse tempore earum, veritatis culpa, vel reiciendis.
+        Amet beatae, quae assumenda sapiente quos asperiores, quia, voluptatum voluptate obcaecati nesciunt cum incidunt cupiditate. Sapiente molestias incidunt ratione possimus labore sunt vitae. Eos, aspernatur assumenda fugit atque ipsam iusto.
+    </p>
+    
+</body>
+</html>
