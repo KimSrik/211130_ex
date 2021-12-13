@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .wrap{
+            width: 960px;
+            margin: 20px auto;
+            border: 2px solid #000;
+            padding: 20px;
+        }
+        .box01{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            padding: 20px;
+            border-radius: 20px;
+
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+
+            /* 현재 클래스가 transform하는데 걸리는 시간 */
+            transition: 2s;
+        }
+        .box02{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            padding: 20px;
+            border-radius: 20px;
+
+            background-color: #f00;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+
+            transition: 2s;
+        }
+        .box01:hover{
+            transform: rotate(45deg);
+        }
+        .box02{
+            background-color: #00f;
+        }
+        .box03{
+            width: 300px;
+            height: 300px;
+            border:1px solid #000;
+            perspective: 200px;
+            /* 원근감. */
+        }
+        /* 
+        부모 요소의 가로, 세로의 크기를 그대로 물려 받을 경우
+        100%로 두면 된다.
+        */
+        .box03 .child-box{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transition: 1s;
+
+        }
+        /* rotate()는 rotateZ()와 같다. */
+        .box03:hover .child-box{
+            transform:rotateY(360deg);
+        }
+        .box04, .box05{
+            width:200px;
+            height:200px;
+            border:1px solid #000;
+            background-color: #000;
+            
+            font-weight:900;
+            font-size:32px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            transition: 5s;
+        }
+        .wrap:hover .box04{
+            /* margin-left: 300px; */
+
+            /* translate는 현 위치에서의 변경. */
+            transform: translate(200px,200px);            
+        }
+
+        .wrap:hover .box05{
+            /* 여기서 %는 나 자신 비례. */
+            transform: translate(50%);
+        }
+        .box06{
+            width: 600px;
+            height: 600px;
+            margin: 30px auto;
+            border: 2px solid #f00;
+
+            position:relative;
+            
+        }
+        .box06 .child-box{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box01">회전</div>
+        <div class="box02" onclick="
+        this.style.transform='rotate(-45deg)';" 
+        ondblclick="this.style.transform='rotate(0deg)';">역회전</div>
+        <div class="box03">
+            <div class="child-box">
+                <img src="./images/christmas01.jpg" alt="크리스마스1">
+            </div>
+        </div>
+        <div class="box04">이동</div>
+        <div class="box05">이동2</div>
+        <div class="box06">
+            <div class="child-box">
+                가로세로가운데 맞춤
+            </div>
+        </div>
+        <div class="box07"></div>
+        <div class="box08"></div>
+        <div class="box09"></div>
+        <div class="box10"></div>
+    </div>
+</body>
+</html>
