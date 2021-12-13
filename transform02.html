@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신상품 목록</title>
+    <style>
+        /* CSS Reset */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol, li{
+            list-style:none;           
+        }
+        img{
+            width: 100%;
+            vertical-align:bottom;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+        
+
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header{
+            padding: 20px 16px;
+        }
+        .header h1{
+            font-size: 62px;
+            text-align: center;
+        }
+        .sec01{
+            padding: 20px 16px;
+        }
+        .sec01 li{
+            position: relative;
+            float: left;
+            width: 32%;
+            margin-right: 2%;
+            overflow: hidden;
+        }
+        /* 
+        여기에 쓴 가상요소는 무슨 내용을 넣기 위해서나
+        위치를 배치 하기 위해서 한 게 아니라서 clear:both 할 필요가 없다.
+        */
+        .sec01 li::before{
+            content: '';
+            display: block;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+
+            transform:translateY(-100%);
+            transition: 0.3s;
+        }
+        
+        .sec01:hover li::before{
+            transform:translateY(0);
+        }
+
+        .sec01 li:last-child{
+            margin-right: 0;
+        }
+
+        /*
+        relative랑 사이즈가 똑같다. 
+
+        */
+        
+        li .content-box{
+            position: absolute;
+            left: 50%;
+            top: 150%;
+            transform:translate(-50%, -50%);
+            transition: 0.3s;
+            
+            
+            width: 80%;
+            color: #fff;
+        }
+        
+        
+        li:hover .content-box{
+            top: 50%;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>신상품 목록</h1>
+        </header>
+        <section class="sec sec01">
+            <ul class="clearfix">
+                <li>
+                    <div class="img-box">
+                        <img src="./images/christmas01.jpg" alt="크리스마스01">
+                    </div>
+                    <div class="content-box">
+                        <h2>크리스마스 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium qui natus quae cupiditate reiciendis suscipit reprehenderit repellendus fuga enim, at ad ipsa optio modi quidem possimus iure quis beatae!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-box">
+                        <img src="./images/christmas02.jpg" alt="크리스마스02">
+                    </div>
+                    <div class="content-box">
+                        <h2>크리스마스 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium qui natus quae cupiditate reiciendis suscipit reprehenderit repellendus fuga enim, at ad ipsa optio modi quidem possimus iure quis beatae!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-box">
+                        <img src="./images/christmas03.jpg" alt="크리스마스03">
+                    </div>
+                    <div class="content-box">
+                        <h2>크리스마스 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium qui natus quae cupiditate reiciendis suscipit reprehenderit repellendus fuga enim, at ad ipsa optio modi quidem possimus iure quis beatae!</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+    
+</body>
+</html>

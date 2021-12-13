@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달나라</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+
+
+        .wrap{
+            width: 100%;
+            overflow: hidden;
+        }
+        .header{
+            position: relative;
+            padding: 20px 12px;
+            /* perspective: 600px; */
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .btn-nav{
+            position: absolute;
+            right: 12px;
+            top:50%;
+            transform:translateY(-50%);
+
+            border: 1px solid #666;
+            padding: 6px;
+            border-radius: 2px;
+        }
+
+        .btn-nav span{
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin-bottom: 4px;
+            background-color: #000;
+        }
+
+        .btn-nav span:last-child{
+            margin-bottom: 0;
+        }
+
+
+        .nav{
+            position: fixed;
+            left: 0;
+            top: 72px;
+            right: 0;
+            bottom: 0;
+
+            background-color: rgba(0, 0, 0, 0.3);
+            transform:translateX(100%) rotate(360deg);
+            backface-visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .nav ul{
+            float: right;
+            width:50%;
+            height:100%;
+            padding:20px;
+            background-color:#000;
+        }
+       
+        .nav.active{
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .nav li{
+            margin-bottom:30px;
+            font-size:1.4em;
+        }
+
+        .nav a{
+            color: #fff;
+            transition: 0.2s;
+        }
+
+        .nav a:hover{
+            text-decoration: underline;
+            color:lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>달나라</h1>    
+               <!-- 네비게이션 유무의 트리거  -->
+            <div class="btn-nav" onclick="
+                document.getElementById('nav').classList.toggle('active');
+            ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav clearfix" id="nav">
+                <ul>
+                    <li><a href="#">링크1</a></li>
+                    <li><a href="#">링크2</a></li>
+                    <li><a href="#">링크3</a></li>
+                    <li><a href="#">링크4</a></li>
+                    <li><a href="#">링크5</a></li>
+                </ul>
+            </nav>
+         </header>
+         <section class="sec sec01">
+             <img src="./images/christmas04.jpg" alt="크리스마스03">
+         </section>
+    </section>   
+</body>
+</html>

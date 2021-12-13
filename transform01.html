@@ -131,6 +131,79 @@
 
         }
 
+        .box08{
+            width: 600px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        /* 
+        scale는 x, y축이 있어서 따로 지정도 가능
+        자식 박스가 2배가 되는 것. 
+        */
+        .box08 .child-box{
+            transition:1s;
+        }
+        .box08:hover .child-box{
+            transform:scale(1.2, 1);
+        }
+        .box09{
+            width: 640px;
+            margin: 20px auto;
+            border: 2px solid #f00;
+            padding: 20px;
+        }
+        .box09>div{
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            background-color: #000;
+            float: left;
+        }
+        .box09>.child-box03{
+            margin-right: 0;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .box09>.child-box01:hover{
+            transform:rotate(15deg);
+            transform-origin:50px 50px;
+        }
+        .box09>.child-box02:hover{
+            transform:rotate(15deg);
+            transform-origin: center center;
+        }
+        .box09>.child-box03:hover{
+            transform:rotate(15deg);
+            transform-origin: 50% 50%;
+        }
+        .box10{
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #000;
+            perspective: 600px;
+        }
+        .box10 .rotatey-box{
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+
+            transition: 2s;
+            backface-visibility: hidden;
+        }
+
+        .box10:hover .rotatey-box{
+            transform:rotateY(360deg);
+        }
+
+
     </style>
 </head>
 <body>
@@ -151,10 +224,23 @@
                 가로세로가운데 맞춤
             </div>
         </div>
-        <div class="box07"></div>
-        <div class="box08"></div>
-        <div class="box09"></div>
-        <div class="box10"></div>
+        <div class="box07">
+        </div>
+        <div class="box08">
+            <div class="child-box">
+                <img src="./images/christmas02.jpg" alt="크리스마스2">
+            </div>
+        </div>
+        <div class="box09 clearfix">
+            <div class="child-box01">9-1</div>
+            <div class="child-box02">9-2</div>
+            <div class="child-box03">9-3</div>
+        </div>
+        <div class="box10">
+            <div class="rotatey-box">
+                Y축 회전
+            </div>
+        </div>
     </div>
 </body>
 </html>
