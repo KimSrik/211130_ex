@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_box</title>
+    <style>
+        .box{
+            margin: 0 auto 100px;
+
+            width: 600px;
+            height: 900px;
+            background-color: #000;
+            display: flex;
+            /* 
+            flex 컨테이너가 된다.
+            그러면 자식들은 flex item이 된다.
+            */
+
+            flex-direction: column;
+            /*
+            item들을 어떻게 배치를 할 것인가.
+            방향을 정한다.
+            column은 세로로 row는 가로로 배치.
+            뒤에 -reverse를 붙이면 역순으로도 할 수 있다.
+            */
+
+            align-items:center;
+            /* 
+            축을 direction을 기준으로 정렬을 하는 방식을 바꿀 수 있다.
+            */
+
+            justify-content: space-between;
+            /* 
+            축의 수직방향 정렬을 바꿀 수 있다.
+            */
+
+            text-indent: -999999px;
+        }
+        .child-box{
+            width: 300px;
+            height: 300px;
+
+            background-color: #f00;
+        }
+        .child-box:last-child{           
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <div class="child-box">
+
+            </div>
+            <div class="child-box">
+
+            </div>
+        </div>
+</body>
+</html>
