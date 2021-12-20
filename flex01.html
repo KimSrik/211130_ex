@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex01</title>
+    <style>
+        *{
+            /* box-sizing: border-box; */
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        .par-box{
+            width: 1200px;
+            
+            margin: 0 auto;
+            border:1px solid #000;
+            /* flex 컨테이너가 된다. or 플렉서블 박스 */
+            display:flex;
+            
+            /* 주축을 x축으로 한다.(가로) */
+            flex-direction: row;
+            /* 주축을 y축으로 한다. (세로) */
+            /* flex-direction: column; */
+
+            /* 역방향으로 할 경우 -reverse */
+
+            /*
+            줄바꿈. 기본값은 nowrap이다. 
+            nowrap를 하게 되면 크기를 구겨서라도 넣게 됨.
+            wrap는 크기가 초과하면 줄바꿈을 하게 됨.
+            */
+            flex-wrap: nowrap;
+        }
+        .par-box{
+            height: 300px;
+            /* 플렉스 컨테이너가 되어야 하기 때문에 써야 하는 것들 */
+            display: flex;
+            /* 합쳐서 쓸 경우 flow를 쓴다. 방향 / 줄바꿈 순서. */
+            flex-flow: column wrap;
+        }
+        .child-box{
+            display: block;
+            width: 600px;
+            height: 150px;
+        }
+        .child-box01{
+            background-color: #f00;
+        }
+        .child-box02{
+            background-color: #0f0;
+        }
+        .child-box03{
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Container</h1>
+    <div class="par-box">
+        <div class="child-box child-box01"></div>
+        <div class="child-box child-box02"></div>
+        <div class="child-box child-box03"></div>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nemo ullam nisi esse quam, quisquam nihil reiciendis! Voluptatibus amet enim quis esse repellendus aperiam asperiores quidem. Maiores eveniet ipsam hic.
+    Cumque pariatur atque doloremque fugiat harum dolor aperiam blanditiis sunt provident nihil quisquam impedit, alias tempora odit eum quaerat! Itaque quisquam expedita culpa fugit rem tempora nobis voluptatibus tenetur voluptate.
+    Ipsa explicabo sed pariatur vitae, consequatur placeat provident officia. Aliquid inventore, aut iste doloremque nesciunt optio repellat dolorum repellendus, quisquam delectus natus molestias maiores, ullam reiciendis cumque temporibus facere incidunt?
+    Corrupti in eligendi, cupiditate ipsa dolorem magni nemo blanditiis ex ea quae. Aspernatur reiciendis, perspiciatis, atque obcaecati, molestias vel animi explicabo sunt suscipit ducimus nam quisquam ea cupiditate nulla rerum.
+    Impedit, esse assumenda magnam odit voluptate nostrum non quia voluptates. Tenetur consectetur, perferendis eaque incidunt libero eum quibusdam officia. Quod sequi vitae quasi maxime. Minima, at soluta. Perferendis, reiciendis asperiores.
+    Dolor molestias possimus laboriosam! Rem consequatur maxime, reiciendis amet distinctio necessitatibus commodi fugit, at nostrum, praesentium quod aliquam impedit? Totam distinctio cumque consequatur ea, facere nisi ipsa neque consequuntur pariatur?
+    Hic iusto fuga et quis optio id est. Maxime, quaerat omnis blanditiis saepe quibusdam soluta consequuntur consectetur excepturi perspiciatis, mollitia earum voluptate, adipisci eum voluptatum suscipit illum dolor modi. Vel!
+    Aspernatur, quo quasi ipsum optio numquam commodi illum laborum ipsa suscipit accusamus rem, sed distinctio illo hic. In omnis vel ipsum quo, odio mollitia accusamus quidem officia sit saepe non.
+    Saepe magni enim quod quis, eaque molestias dolorem perspiciatis molestiae ab nobis eos aspernatur impedit quia blanditiis id facere reiciendis doloribus perferendis quisquam debitis illum. Iure architecto tempora fugit porro?
+    Est consequuntur, veniam minima voluptates aliquid modi earum iusto qui unde, placeat perspiciatis error perferendis amet. Porro illo nobis quam, esse asperiores neque praesentium assumenda at laborum deserunt ex minus?</p>
+</body>
+</html>
