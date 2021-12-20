@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex03</title>
+    <style>
+        .par-box{
+            width: 900px;
+            height: 600px;
+            margin: 100px auto;
+            border: 2px solid #000;
+
+            display: flex;
+            flex-flow: row nowrap;
+
+            /* 주축 방향에 대한 맞춤 */
+            justify-content:center ;
+
+            /* 교차축 방향에 대한 맞춤 */
+            align-items:center;
+        }
+        .child-box{
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+
+            display: flex;
+            justify-content:center;
+            align-items:center;
+
+
+            /* text-align: center; */
+            /* line-height: 150px; */
+        }
+        .child-box01{
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .child-box03{
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">1box</div>
+        <div class="child-box child-box02">2box</div>
+        <div class="child-box child-box03">3box</div>
+    </div>
+</body>
+</html>

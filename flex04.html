@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex04</title>
+    <style>
+        .par-box{
+            width: 700px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+
+            display: flex;
+            flex-flow: row wrap;
+            
+            /* 
+            align-items와는 다르다.
+            교차축 방향으로 두 줄 이상 나온다면
+            items로 하기보다 content로 맞춰야 한다. 
+            */
+            align-content: space-evenly;
+            
+        }
+        .child-box{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            margin: 0 0 0 100px;
+
+            border: 5px solid #000;
+            font-size: 32px;
+
+            display: flex;
+            /* flex-flow: row nowrap; */
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        /* 주축은 바꿀수가 없는데 교차축 방향은 바꿀 수 있다. */
+        .child-box06{
+            align-self: flex-end;
+        }
+
+        .par-box02{
+            width: 1000px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-content: center;
+            
+        }
+        .child-box2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #f00;  
+                    
+        }
+
+        .child-box2-01{
+            align-self: flex-start;
+            order: 1;
+        }
+        .child-box2-02{
+            align-self: center;
+            order: 3;
+        }
+        .child-box2-03{
+            align-self: flex-end;
+            order: 2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">1</div>
+        <div class="child-box child-box02">2</div>
+        <div class="child-box child-box03">3</div>
+        <div class="child-box child-box04">4</div>
+        <div class="child-box child-box05">5</div>
+        <div class="child-box child-box06">6</div>
+    </div>
+
+    <div class="par-box02">
+        <div class="child-box2 child-box2-01">2-1</div>
+        <div class="child-box2 child-box2-02">2-2</div>
+        <div class="child-box2 child-box2-03">2-3</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex05</title>
+    <style>
+        .par-box{
+            width: 60%;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .child-box{
+            /* width: 100px; */
+
+            /* flex의 기본 너비 -> 너비를 주면 auto가 풀림 */
+            height: 200px;
+            border: 1px solid #f00;
+        }
+
+            /* flex는 비율 1:2:3 */
+        .child-box01{
+            /* 세개 다 안 쓰면 처음에 크기가 이상할 수 있음. */
+            /* 고정 되어 있을 때 비율(혹은 크기) */
+            flex-basis: 1;
+
+            /* 늘어 날 때의 비율 */
+            flex-grow: 1;
+
+            /* 줄어 들 때의 비율 */
+            flex-shrink: 1;
+
+
+            /* flex:1 1 auto; */
+            /* flex: 1; */
+        }
+        .child-box02{
+            flex-basis: 2;
+            flex-grow: 2;
+            flex-shrink: 2;
+            
+            
+            /* flex:2 2 auto; */
+            /* flex: 2; */
+        }
+        .child-box03{
+            flex-basis: 2;
+            flex-grow: 3;
+            flex-shrink: 3;
+
+
+            /* flex:3 3 auto; */
+            /* flex: 3; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">box01</div>
+        <div class="child-box child-box02">box02</div>
+        <div class="child-box child-box03">box03</div>
+    </div>
+</body>
+</html>
