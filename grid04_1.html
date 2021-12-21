@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid04</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .par-box{
+            width : 1200px;
+            margin: 20px;
+            padding: 20px auto;
+
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            column-gap: 12px;
+            grid-template-rows: 100px 300px 100px;
+            row-gap: 12px;
+        }
+        .child-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child-box01{
+            grid-column: 1/17;
+            background-color: #f00;
+        }
+        .child-box02{
+            grid-column: 1/5;
+            background-color: #00f;
+            color: #fff;
+        }
+        .child-box03{
+            grid-column: 5/17;
+            background-color: #0f0;
+        }
+        .child-box04{
+            grid-column: 1/17;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">header</div>
+        <div class="child-box child-box02">aside</div>
+        <div class="child-box child-box03">section</div>
+        <div class="child-box child-box04">footer</div>
+    </div>
+</body>
+</html>

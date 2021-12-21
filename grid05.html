@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid05</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .par-box{
+            width: 600px;
+            height: 600px;
+            margin: 20px auto;
+            border: 10px solid #f00;
+            border-radius: 10px;
+            padding: 10px;
+
+            display: grid;
+            /* grid-template-rows: repeat(3, 1fr); */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* 축약형으로 쓸 경우 rows/columns  */
+            grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+            
+            gap: 12px;
+            
+
+            /* grid에서는 justify는 무조건 가로맞춤 */
+            /* fr로 크기조정을 하게되면 space-around가 의미 X */
+            /* justify-content: space-around; */
+            /* align-content: space-around; */
+            /* place-content: space-around; */
+
+            /* cell 내부에서 위치 조정 */
+            /* justify-items: end; */
+            /* align-items: center; */
+            /* align justify 순으로 적고 하나만 적으면 둘다 적용 */
+            place-items: center end;
+        }
+        .child-box{
+            width: 100px;
+            height: 100px;
+            border: 4px solid #000;
+            border-radius: 10px;
+            text-align: center;
+
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            
+            
+        }
+
+        .child-box01{
+            /* items의 영향을 받지 않음 */
+            justify-self: end;
+            align-self: end;
+        }
+        .child-box06{
+            justify-self: start;
+            align-self: end;
+        }
+        .child-box08{
+            place-self: start center;
+        }
+        .child-box09{
+            /* cell의 너비와 높이에 맞게 됨 */
+            width: auto;
+            height: auto;
+            
+            align-self: stretch;
+            justify-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">1</div>
+        <div class="child-box child-box02">2</div>
+        <div class="child-box child-box03">3</div>
+        <div class="child-box child-box04">4</div>
+        <div class="child-box child-box05">5</div>
+        <div class="child-box child-box06">6</div>
+        <div class="child-box child-box07">7</div>
+        <div class="child-box child-box08">8</div>
+        <div class="child-box child-box09">9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid01</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .par-box{
+            width: 1132px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightblue;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .child-box{
+            flex: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .child-box03{
+            margin-right: 0;
+        }
+
+        .grid-container{
+            width: 1132px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: lightcoral;
+
+            display: grid;
+
+            /*
+            1 2 3번째 column의 너비 
+            비율로 하게 되면 1fr 이런식으로 하면 된다.
+            혹은 3번을 반복하고 1비율로 하게 되면
+            repeat(3, 1fr)로 쓴다.
+            */
+            /* grid-template-columns: 2fr 3fr 1fr; */
+            /* grid-template-columns: repeat(12, 1fr); */
+            grid-template-columns: auto auto auto;
+
+            /* column 사이의 공백 */
+            column-gap: 20px;
+        }
+        .grid-item{
+            text-align: center;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+    <!-- par-box는 그리드 컨테이너 -->
+    <div class="par-box">
+        <div class="child-box child-box01">박스1</div>
+        <div class="child-box child-box02">박스2</div>
+        <div class="child-box child-box03">박스3</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item grid-item01">그리드아이템1</div>
+        <div class="grid-item grid-item02">그리드아이템2</div>
+        <div class="grid-item grid-item03">그리드아이템3</div>
+        <div class="grid-item grid-item03">그리드아이템3</div>
+    </div>
+</body>
+</html>
